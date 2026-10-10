@@ -1,0 +1,247 @@
+/* Reset básico de margens e fontes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.6rem;
+    color: #2c3e50;
+    margin-bottom: 25px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.input-group label, .select-box label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #444;
+}
+
+.input-group input, .select-box select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+}
+
+/* Agrupamento dos campos de seleção de moedas lado a lado */
+.currency-group {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.select-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background-color: #11998e;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+}/* Reset básico para remover margens padrão e uniformizar o cálculo de largura/altura */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Estilização do fundo da página com gradiente em tom verde/turquesa */
+body {
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Cartão principal centralizado que envolve o conversor */
+.container {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+}
+
+/* Título principal */
+h1 {
+    font-size: 1.6rem;
+    color: #2c3e50;
+    margin-bottom: 25px;
+}
+
+/* Agrupamento do rótulo (label) e do campo de digitar valor */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+/* Estilos comuns para as etiquetas de texto dos inputs e selects */
+.input-group label, 
+.select-box label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #444;
+}
+
+/* Agrupamento das caixas de seleção de moedas (De e Para) lado a lado */
+.currency-group {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    width: 100%; /* Garante que o grupo ocupe toda a largura do cartão */
+}
+
+/* Caixa individual que segura o rótulo e o menu suspenso de cada moeda */
+.select-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    min-width: 0; /* Impede que textos longos no select vazem para fora da caixa */
+}
+
+/* Configuração dos campos de entrada de texto e menus suspensos (<select>) */
+.input-group input, 
+.select-box select {
+    width: 100%; /* Força o input e o select a preencherem exatamente o espaço disponível */
+    padding: 12px 8px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    outline: none;
+    background-color: #fff;
+}
+
+/* Botão principal de conversão */
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background-color: #11998e;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+}
+
+/* Efeito ao passar o ponteiro do mouse sobre o botão */
+button:hover {
+    background-color: #0e7d74;
+}
+
+/* Container do resultado retornado pela API */
+#result-container {
+    margin-top: 25px;
+    padding: 15px;
+    background-color: #e8f8f5;
+    border-radius: 8px;
+    border: 1px solid #a3e4d7;
+}
+
+/* Destaque para o valor final convertido */
+#converted-amount {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #11998e;
+    margin-bottom: 5px;
+}
+
+/* Texto secundário para exibir a cotação individual (ex: 1 USD = 5,00 BRL) */
+#exchange-rate {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Classe utilitária para esconder elementos quando necessário */
+.hide {
+    display: none;
+}
+
+/* Mensagem de erro que aparece apenas se a requisição falhar */
+#error-message {
+    color: #e74c3c;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #0e7d74;
+}
+
+/* Container do Resultado */
+#result-container {
+    margin-top: 25px;
+    padding: 15px;
+    background-color: #e8f8f5;
+    border-radius: 8px;
+    border: 1px solid #a3e4d7;
+}
+
+#converted-amount {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #11998e;
+    margin-bottom: 5px;
+}
+
+#exchange-rate {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Classe utilitária para ocultar elementos */
+.hide {
+    display: none;
+}
+
+#error-message {
+    color: #e74c3c;
+    margin-top: 15px;
+    font-weight: bold;
+}

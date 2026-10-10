@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Configuração de codificação de caracteres e responsividade -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Moedas</title>
+    
+    <!-- Arquivo de estilos CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>💵 Conversor de Moedas</h1>
+
+        <!-- Campo para digitar o valor a ser convertido -->
+        <div class="input-group">
+            <label for="amount">Valor:</label>
+            <input type="number" id="amount" value="1" min="0" step="any" placeholder="Digite o valor...">
+        </div>
+
+        <!-- Opções de seleção de moedas -->
+        <div class="currency-group">
+            
+            <!-- Moeda de origem -->
+            <div class="select-box">
+                <label for="from-currency">De:</label>
+                <select id="from-currency">
+                    <option value="BRL" selected>BRL - Real Brasileiro</option>
+                    <option value="USD">USD - Dólar Americano</option>
+                    <option value="EUR">EUR - Euro</option>
+                    <option value="GBP">GBP - Libra Esterlina</option>
+                    <option value="JPY">JPY - Iene Japonês</option>
+                </select>
+            </div>
+
+            <!-- Moeda de destino -->
+            <div class="select-box">
+                <label for="to-currency">Para:</label>
+                <select id="to-currency">
+                    <option value="USD" selected>USD - Dólar Americano</option>
+                    <option value="BRL">BRL - Real Brasileiro</option>
+                    <option value="EUR">EUR - Euro</option>
+                    <option value="GBP">GBP - Libra Esterlina</option>
+                    <option value="JPY">JPY - Iene Japonês</option>
+                </select>
+            </div>
+
+        </div>
+
+        <!-- Botão para acionar a conversão -->
+        <button id="convert-btn">Converter</button>
+
+        <!-- Área onde os resultados serão exibidos -->
+        <div id="result-container" class="hide">
+            <p id="converted-amount"></p>
+            <p id="exchange-rate"></p>
+        </div>
+
+        <!-- Mensagem de erro caso a requisição falhe -->
+        <p id="error-message" class="hide">Erro ao buscar as taxas de câmbio. Tente novamente!</p>
+    </div>
+
+    <!-- Script JavaScript -->
+    <script src="js/script.js" defer></script>
+</body>
+</html>
